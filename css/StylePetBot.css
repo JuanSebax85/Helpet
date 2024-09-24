@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url('assets/SuperCaramel.ttf') format('truetype'); 
+}
+
+body {
+    background-color: #00FF9D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'MiFuente', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.petbot-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.petbot-title {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+.petbot-description {
+    font-size: 1.5em;
+}

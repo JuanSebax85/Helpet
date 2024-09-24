@@ -1,0 +1,101 @@
+body, html {
+    background-color: #252627;
+    color: #00FF9D; 
+    margin: 0; 
+    height: 100%; 
+    width: 100%; 
+    overflow-x: hidden;
+    text-align: left; 
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('assets/SuperCaramel.ttf') format('truetype'); 
+}
+@font-face {
+    font-family: 'Textos'; 
+    src: url('css/assets/CarvingSoft.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+.div1 { 
+    background-color: #1e1e1f;
+    padding: 20px;
+    width: 100%;
+    height: 5%;
+    user-select: none; 
+}
+
+.div1 h1 {
+    color: #00FF9D; 
+    font-family: 'MiFuente', sans-serif;
+    font-size: 42px;
+    margin-top: -10px;
+}
+
+.tarjeta {
+    background-color: #00FF9D; 
+    padding: 20px;
+    border-radius: 10px; 
+    width: 25%; 
+    height: 300px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    color: #1e1e1f; 
+    transition: transform 0.3s ease; 
+    
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    justify-content: space-between; /* Separa el contenido entre el principio y el final */
+    overflow: hidden; /* Asegura que el contenido que sobresale no sea visible */
+}
+
+.tarjeta h3 {
+    color: #ffffff; 
+    font-family: 'Textos', sans-serif;
+    font-size: 24px; /* Tamaño de letra para títulos */
+    margin-top: 10px;
+    user-select: none; 
+}
+
+img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Mantiene la proporción de la imagen mientras la recorta si es necesario */
+}
+
+.tarjetas-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    margin-top: 20px; 
+    padding: 20px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px); 
+}
+
+/* Media queries para adaptar el diseño */
+@media (max-width: 624px) {
+    .tarjetas-container {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .tarjeta {
+        width: 80%; /* Ajusta el ancho de las tarjetas */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .tarjeta h3 {
+        font-size: 24px; /* Ajusta el tamaño de letra en pantallas más pequeñas */
+    }
+}
+
+@media (min-width: 624px) {
+    .tarjeta {
+        width: 25%; /* Mantiene el ancho en pantallas más grandes */
+    }
+}
